@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_07_07_093458) do
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
-    t.integer "irrigation_frequency"
+    t.integer "irrigation_frequency_in_days"
     t.integer "health_status"
     t.integer "species_id"
     t.datetime "created_at", null: false
