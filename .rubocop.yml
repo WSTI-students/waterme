@@ -1,0 +1,47 @@
+AllCops:
+  Exclude:
+    - Gemfile*
+    - db/**/*
+    - config/**/*
+    - bin/*
+AlignParameters:
+  Enabled: false
+Documentation:
+  Enabled: false
+ClassLength:
+  CountComments: false
+  Max: 200
+LineLength:
+  Max: 100
+Metrics/AbcSize:
+  Max: 20
+Metrics/LineLength:
+  Max: 100
+MethodLength:
+  CountComments: false
+  Max: 15
+Naming/FileName:
+  Enabled: false
+Layout/AlignHash:
+  Enabled: false
+Layout/DotPosition:
+  EnforcedStyle: leading
+Style/EmptyMethod:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+Style/SymbolProc:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+  
