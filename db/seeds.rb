@@ -16,4 +16,4 @@ Species.find_or_create_by!(name: 'Figowiec benajmina', latin_name: 'Ficus benjam
 Species.find_or_create_by!(name: 'Pelargonia', latin_name: 'Pelargonium', irrigation_level: :low)
 Species.find_or_create_by!(name: 'Agawa', latin_name: 'Agave', irrigation_level: :low)
 Species.find_or_create_by!(name: 'Bonsai', irrigation_level: :high)
-Species.find_or_create_by!(name: 'Bluszcz', latin_name: 'Hedera Helix', irrigation_level: high) 
+Species.find_or_create_by!(name: 'Bluszcz', latin_name: 'Hedera Helix', irrigation_level: :high) 
