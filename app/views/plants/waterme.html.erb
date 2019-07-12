@@ -1,1 +1,8 @@
-<h1>u mnie dziala</h1>
+<h1>Cześć Janusz</h1>
+
+<h2>Moje roślinki:<h2>
+<ul>
+  <% @plants.each do |plant| %>
+    <li><%= plant.name %></li>
+  <% end %>
+</ul>
