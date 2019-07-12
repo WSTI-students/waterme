@@ -66,3 +66,6 @@ gem 'rubocop', require: false
 # Bootstrap gem
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+# Devise gem
+gem 'devise'
