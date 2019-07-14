@@ -6,6 +6,7 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
+    
   end
 
   def index
@@ -20,7 +21,7 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = Plant.new(plant_params)
-    @species = Species.name.new 
+
 
     respond_to do |format|
       if @plant.save
@@ -65,6 +66,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def plant_params
-    params.require(:plant).permit(:name, :species, :health_status)
+    params.require(:plant).permit(:name, :species_id, :health_status, :irrigation_frequency_in_days)
   end
 end

@@ -24,7 +24,12 @@
 
   <div class="field">
     <%= form.label "Status zdrowia: " %>
-    <%= form.label :health_status %>
+    <%= form.select(:health_status, Plant.health_statuses.keys) %>    
+  </div>
+
+  <div class="field">
+    <%= form.label "Co ile dni podlewać: " %>
+    <%= form.number_field :irrigation_frequency_in_days %>
   </div>
 
   <div class="actions">
