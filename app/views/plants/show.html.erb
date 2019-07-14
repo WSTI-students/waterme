@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong>Gatunek:</strong>
+  <%= @plant.species.name %>
+</p>
+
+<p>
+  <strong>Ilość nawodnienia:</strong>
+  <%= @plant.health_status %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

@@ -5,7 +5,11 @@ class PlantsController < ApplicationController
   end
 
   def new
-    @plant = plant.new
+    @plant = Plant.new
+  end
+
+  def index
+    @plants = Plant.all
   end
 
   # GET /plants/1/edit
@@ -16,6 +20,7 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = Plant.new(plant_params)
+    @species = Species.name.new 
 
     respond_to do |format|
       if @plant.save
@@ -28,8 +33,8 @@ class PlantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /newplant/1
-  # PATCH/PUT /newplants/1.json
+  # PATCH/PUT /plant/1
+  # PATCH/PUT /plants/1.json
   def update
     respond_to do |format|
       if @plant.update(plant_params)
@@ -52,16 +57,14 @@ class PlantsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_newplant
-      @plant = Plant.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def plant_params
-      params.require(:plant).permit(:name, :species, :health_status)
-    end
-
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_plant
+    @plant = Plant.find(params[:id])
   end
 
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def plant_params
+    params.require(:plant).permit(:name, :species, :health_status)
+  end
+end
