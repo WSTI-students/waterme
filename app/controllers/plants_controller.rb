@@ -6,7 +6,6 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
-    
   end
 
   def index
@@ -21,7 +20,6 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = Plant.new(plant_params)
-
 
     respond_to do |format|
       if @plant.save
@@ -59,6 +57,7 @@ class PlantsController < ApplicationController
   end
 
 private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_plant
     @plant = Plant.find(params[:id])
