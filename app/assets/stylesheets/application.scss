@@ -26,3 +26,23 @@
 	position:r;
 	top:1px;
 }
+
+.iconHealthStatus {
+  min-width: 10px;
+  min-height: 10px;
+  &.normal {
+    background-image: url(image_path("health_status/normal.png"));
+  }
+
+  &.bloom {
+    background-color: #5cbf2a;
+  }
+
+  &.dead {
+    background-color: aquamarine;
+  }
+
+  &.wither {
+    background-color: #2f6627;
+  }
+}

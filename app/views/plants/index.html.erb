@@ -17,7 +17,7 @@
       <tr>
         <td><%= plant.name %></td>
         <td><%= plant.species.name %></td>
-        <td><%= plant.health_status %></td>
+        <td class="iconHealthStatus <%= plant.health_status %>"></td>
         <td><%= plant.irrigation_frequency_in_days %></td>
         <td><%= plant.species.irrigation_level %></td>
         <td><%= link_to 'Pokaż', plant %></td>
@@ -31,3 +31,5 @@
 <br>
 
 <%= link_to 'Dodaj roślinke', new_plant_path %>
+
+<%= image_tag "health_status/normal.png" %>
